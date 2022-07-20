@@ -34,7 +34,7 @@
 	}
 
 //EntranceData
-	const Entrances = {
+	const Entrances_Holodrum = {
 		AncientRuins: [
 			new EntranceData("Dungeon 6 (Ancient Ruins)", EntranceData.type.single, 64, 48),
 			new EntranceData("Old Man (Give)", EntranceData.type.generic, 448, 16),
@@ -203,56 +203,144 @@
 		],
 	}
 
+	const Entrances_Subrosia = {
+		SubrosianVillage: [
+			new EntranceData("Gasha Seed House", EntranceData.type.single, 688, 576),
+			new EntranceData("Locked Passage - L", EntranceData.type.connector, 848, 448),
+			new EntranceData("Locked Passage - R", EntranceData.type.connector, 896, 448),
+			new EntranceData("Portal (Subrosian Market)", EntranceData.type.portal, 1152, 672),
+			new EntranceData("Subrosian Chef's House", EntranceData.type.single, 352, 304),
+			new EntranceData("Subrosian's House", EntranceData.type.single, 608, 320),
+			new EntranceData("Subrosian Market", EntranceData.type.single, 840, 576),
+			new EntranceData("Subrosian Smithy", EntranceData.type.single, 576, 448),
+		],
+		SubrosianVolcanoes: [
+			new EntranceData("Big Empty Cave", EntranceData.type.single, 752, 96),
+			new EntranceData("Dancing Game", EntranceData.type.single, 704, 288),
+			new EntranceData("Dungeon 8 (Sword & Shield Maze)", EntranceData.type.single, 48, 32),
+			new EntranceData("Locked Cave", EntranceData.type.generic, 448, 208),
+			new EntranceData("Portal (Dancing Game)", EntranceData.type.portal, 864, 32),
+			new EntranceData("Portal (Destructive Volcano)", EntranceData.type.portal, 592, 160),
+			new EntranceData("Portal (Dungeon 8)", EntranceData.type.portal, 32, 304),
+			new EntranceData("Small Chest Cave", EntranceData.type.generic, 176, 176),
+			new EntranceData("Remains Volcano", EntranceData.type.single, 592, 96),
+		],
+		SubrosianWilds: [
+			new EntranceData("House of Pirates - L", EntranceData.type.connector, 352, 944),
+			new EntranceData("House of Pirates - U", EntranceData.type.connector, 368, 976),
+			new EntranceData("Pirate ship (Beached)", EntranceData.type.single, 752, 928),
+			new EntranceData("Portal (House of Pirates)", EntranceData.type.portal, 384, 928),
+			new EntranceData("Portal (Small Volcanoes)", EntranceData.type.portal, 528, 736),
+			new EntranceData("Strange Brothers' House - L", EntranceData.type.connector, 288, 672),
+			new EntranceData("Strange Brothers' House - R", EntranceData.type.connector, 336, 688),
+		],
+		TempleofSeasons: [
+			new EntranceData("Main Temple", EntranceData.type.single, 1512, 64),
+			new EntranceData("Tower of Fall", EntranceData.type.single, 1648, 32),
+			new EntranceData("Tower of Spring", EntranceData.type.single, 1328, 320),
+			new EntranceData("Tower of Spring Passage - L", EntranceData.type.connector, 704, 736),
+			new EntranceData("Tower of Spring Passage - R", EntranceData.type.connector, 1360, 336),
+			new EntranceData("Tower of Summer", EntranceData.type.single, 1328, 80),
+			new EntranceData("Tower of Winter", EntranceData.type.connector, 1712, 320),
+		],
+		SubrosianVillage: [
+			new EntranceData("Subrosian Ascent - L", EntranceData.type.connector, 1312, 720),
+			new EntranceData("Subrosian Ascent - U", EntranceData.type.connector, 1360, 672),
+			new EntranceData("Great Furnace", EntranceData.type.single, 1520, 608),
+			new EntranceData("Sign-Loving Subrosian's House", EntranceData.type.single, 1664, 672),
+			new EntranceData("Portal (Great Furnace)", EntranceData.type.portal, 1664, 560),
+		],
+	}
 
-
-//Subrosia Locations
-const locs_subrosianVillage = [
-    new EntranceData("Subrosian Village", "Gasha Seed House", 4,4, 3,4, "single", "B"),
-    new EntranceData("Subrosian Village", "Locked Passage - L", 5,3, 3,4, "connector", "TLL"),
-    new EntranceData("Subrosian Village", "Locked Passage - R", 5,3, 6,4, "connector", "TRR"),
-    new EntranceData("Subrosian Village", "Portal (Subrosian Market)" /*to Spool Swamp"*/, 7,5, 2,2, "portal", "LLL"),
-    new EntranceData("Subrosian Village", "Subrosian Chef's House", 2,2, 2,3, "single", "B"),
-    new EntranceData("Subrosian Village", "Subrosian's House", 3,2, 8,4, "single", "B"),
-    new EntranceData("Subrosian Village", "Subrosian Market", 5,4, 2.5,4, "single", "B"),
-    new EntranceData("Subrosian Village", "Subrosian Smithy", 3,3, 6,4, "single", "B"), 
-];
-
-const locs_subrosianVolcanoes = [
-    new EntranceData("Subrosian Volcanoes", "Big Empty Cave", 4,0, 7,6, "single", "B"),
-    new EntranceData("Subrosian Volcanoes", "Dancing Game", 4,2, 4,2, "single", "BRR"),
-    new EntranceData("Subrosian Volcanoes", "Dungeon 8 (Sword & Shield Maze)", 0,0, 3,2, "single", "B"),
-    new EntranceData("Subrosian Volcanoes", "Locked Cave", 2,1, 8,5, "generic", "B"),
-    new EntranceData("Subrosian Volcanoes", "Portal (Dancing Game)" /*to Eastern Suburbs"*/, 5,0, 4,2, "portal", "RRR"),
-    new EntranceData("Subrosian Volcanoes", "Portal (Destructive Volcano)" /*to Temple Remains Lower"*/, 3,1, 7,2, "portal", "B"),
-    new EntranceData("Subrosian Volcanoes", "Portal (Dungeon 8)" /*to Temple Remains Bastion"*/, 0,2, 2,3, "portal", "B"),
-    new EntranceData("Subrosian Volcanoes", "Small Chest Cave", 1,1, 1,3, "generic", "B"),
-    new EntranceData("Subrosian Volcanoes", "Remains Volcano", 3,0, 7,6, "single", "T")
-];
-
-const locs_subrosianWilds = [
-    new EntranceData("Subrosian Wilds", "House of Pirates - L", 2,7, 2,3, "connector", "LLL"),
-    new EntranceData("Subrosian Wilds", "House of Pirates - U", 2,7, 3,5, "connector", "RRR"),
-    new EntranceData("Subrosian Wilds", "Pirate ship (Beached)", 4,7, 7,2, "single", "B"),
-    new EntranceData("Subrosian Wilds", "Portal (House of Pirates)" /*to Horon Village"*/, 2,7, 4,2, "portal", "T"),
-    new EntranceData("Subrosian Wilds", "Portal (Small Volcanoes)" /*to Mt. Cucco"*/, 3,5, 3,6, "portal", "T"),
-    new EntranceData("Subrosian Wilds", "Strange Brothers' House - L", 1,5, 8,2, "connector", "BLL"),
-    new EntranceData("Subrosian Wilds", "Strange Brothers' House - R", 2,5, 1,3, "connector", "BR"),
-];
-
-const locs_templeOfSeasons = [
-    new EntranceData("Temple of Seasons", "Main Temple", 9,0, 4.5,4, "single", "B"),
-    new EntranceData("Temple of Seasons", "Tower of Fall", 10,0, 3,2, "single", "BR"),
-    new EntranceData("Temple of Seasons", "Tower of Spring", 8,2, 3,4, "single", "T"),
-    new EntranceData("Temple of Seasons", "Tower of Spring Passage - L", 4,5, 4,6, "connector", "B"),
-    new EntranceData("Temple of Seasons", "Tower of Spring Passage - R", 8,2, 5,5, "connector", "B"),
-    new EntranceData("Temple of Seasons", "Tower of Summer", 8,0, 3,5, "single", "B"),
-    new EntranceData("Temple of Seasons", "Tower of Winter", 10,2, 7,4, "connector", "B")
-];
-
-const locs_easternSubrosia = [
-    new EntranceData("Subrosian Village", "Subrosian Ascent - L", 8,5, 2,5, "connector", "BR"),
-    new EntranceData("Subrosian Village", "Subrosian Ascent - U", 8,5, 5,2, "connector", "TL"),
-    new EntranceData("Subrosian Village", "Great Furnace", 9,4, 5,6, "single", "B"),
-    new EntranceData("Subrosian Village", "Sign-Loving Subrosian's House", 10,5, 4,2, "single", "B"),
-    new EntranceData("Subrosian Village", "Portal (Great Furnace)" /*to Eyeglass Lake"*/, 10,4, 4,3, "portal", "T")
-];
+//Key locations
+	const KeyLocations = {
+		Dungeons: [
+			"Dungeon 0 - Hero's Cave",
+			"Dungeon 1 - Gnarled Root",
+			"Dungeon 2 - Snake's Remains",
+			"Dungeon 3 - Poison Moth's Lair",
+			"Dungeon 4 - Dancing Dragon Dungeon",
+			"Dungeon 5 - Unicorn's Cave",
+			"Dungeon 6 - Ancient Ruins",
+			"Dungeon 7 - Explorer's Crypt",
+			"Dungeon 8 - Sword & Shield Maze",
+		],
+		Events: [
+			"Floodgate Keeper's House",
+			"Great Furnace",
+			"Moblin's Keep",
+			"House of Pirates",
+			"Red Ring Guardian",
+			"Subrosian Smithy",
+		],
+		Shops: [
+			"Advance Shop",
+			"Horon Village Shop",
+			"Subrosian Market",
+		],
+		AreaAccess: [
+			"Dancing Dragon Keyhole",
+			"Eastern Suburbs",
+			"Floodgate Keyhole",
+			"Goron Mountain",
+			"Graveyard",
+			"Mt. Cucco",
+			"Sunken City",
+			"Tarm Ruins",
+			"Temple Remains",
+			"Western Coast",
+			"Woods of Winter (North)",
+			"Woods of Winter (Snake's Remains)",
+			"Subrosia (N)",
+			"Subrosia (NW)",
+			"Subrosia (NE)",
+			"Subrosia (S)",
+			"Subrosia (SW)",
+			"Subrosia (SE)",
+		],
+		ComplexConnectors: [
+			"Goron City (Upper)",
+			"Goron City (Middle)",
+			"Goron City (Lower)",
+			"Windmill (Upper)",
+			"Windmill (Middle)",
+			"Windmill (Lower)",
+		],
+		Checks_Bombs: [
+			"Dungeon 2 (Basement)",
+			"Mayor Ruul's House",
+			"Mr. Left's House",
+			"House on the Western Coast",
+			"Subrosian Volcano",
+		],
+		Checks_PowerBracelet: [
+			"Tower of Summer",
+		],
+		Checks_RocsFeatherAndCape: [
+			"Mt. Cucco East Ascent",
+			"Mt. Cucco West Ascent",
+			"Graveyard Passage",
+			"Horon Village Portal",
+			"Lava-Flooded Cave",
+			"Tower of Fall",
+			"Tower of Spring",
+			"Tower of Spring Passage",
+			"Tower of Winter",
+		],
+		Checks_ZorasFlippers: [
+			"Flooded Cave (1)",
+			"Flooded Cave (2)",
+			"Flooded Cave (3)",
+			"Flooded Cave (4)",
+			"Underwater Passage",
+			"Underwater Cave",
+			"Floodgate Passage",
+			"Sunken City passage to Woods of Winter",
+		],
+		Checks_MagneticGlove: [
+			"Magnetic Glove Cave (1)",
+			"Magnetic Glove Cave (2)",
+			"Temple Remains Ascent",
+		]
+		
+	}

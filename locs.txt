@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<body>
-
-<script>
 
 const locs_easternSuburbs = [
     ["Eastern Suburbs - Magnetic Glove Cave", 12,12, 1,1, "single", "RRR"],
@@ -229,39 +223,3 @@ const locs_easternSubrosia = [
     ["Subrosian Village - Sign-Loving Subrosian's House", 10,5, 4,2, "single", "B"],
     ["Subrosian Village - Portal (Great Furnace)" /*to Eyeglass Lake"*/, 10,4, 4,3, "portal", "T"]
 ];
-
-function DOTHING(arr = []) {
-    replace = arr[0][0].substring(0, arr[0][0].indexOf('-')+2);
-    let output = `\t${replace.replace(" - ", "").replace(" ", "")}: [\n`;
-    for (let i = 0; i < arr.length; i++) {
-        output = output.concat(`\t\tnew EntranceData(\"${arr[i][0].replace(replace, "")}\", EntranceData.type.${arr[i][5]}, ${arr[i][1]*160 + arr[i][3]*16}, ${arr[i][2]*128 + arr[i][4]*16}),\n`);
-    }
-    output = output.concat("\t],")
-    console.log(output);
-}
-DOTHING(locs_easternSuburbs);
-DOTHING(locs_eyeglassLake);
-DOTHING(locs_goronMountain);
-DOTHING(locs_graveyard);
-DOTHING(locs_holodrumPlain);
-DOTHING(locs_horonVillage);
-DOTHING(locs_graveyard);
-DOTHING(locs_mtCucco);
-DOTHING(locs_natzu);
-DOTHING(locs_northernPeak);
-DOTHING(locs_northHoron);
-DOTHING(locs_samasaDesert);
-DOTHING(locs_spoolSwamp);
-DOTHING(locs_sunkenCity);
-DOTHING(locs_tarmRuins);
-DOTHING(locs_templeRemains);
-DOTHING(locs_westernCoast);
-DOTHING(locs_woodsOfWinter);
-
-
-
-</script>
-
-</body>
-
-</html>

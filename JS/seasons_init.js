@@ -21,7 +21,7 @@
     }
 
 //INITIALISE ENTRANCE MARKERS
-    Object.values(Entrances).forEach((entrArr_region)=>{
+    Object.values(Entrances_Holodrum).forEach((entrArr_region)=>{
         Holodrum.AddEntrances(entrArr_region);
     });
 
@@ -63,8 +63,8 @@
     //Subrosia tiles
         const arr = new Array(11 * 8);
         for (let i = 0; i < arr.length; i++) arr[i] = i;
-        Subrosia.SetAreaState(arr, subrosia);
-        Subrosia.Offset(tilePixels_x *17, tilePixels_y*4);
+        Subrosia.SetAreaState(arr, MapSource.subrosia);
+        //Subrosia.Offset(tilePixels_x *17, tilePixels_y*4);
     }
 
 
