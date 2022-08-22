@@ -168,29 +168,29 @@
 
     function Holodrum_HideOrDisplayMarkers (region) {
         switch (region) {
-            case Region.AncientRuins: HideOrDisplay(Entrances.AncientRuins); break;
-            case Region.TarmRuins: HideOrDisplay(Entrances.TarmRuins); break;
-            case Region.NorthernPeak: HideOrDisplay(Entrances.NorthernPeak); break;
+            case Region.AncientRuins: HideOrDisplay(Entrances_Holodrum.AncientRuins); break;
+            case Region.TarmRuins: HideOrDisplay(Entrances_Holodrum.TarmRuins); break;
+            case Region.NorthernPeak: HideOrDisplay(Entrances_Holodrum.NorthernPeak); break;
             case Region.NorthernPeakAccess: break;
-            case Region.TempleRemains: HideOrDisplay(Entrances.TempleRemains); break;
-            case Region.GoronMountain: HideOrDisplay(Entrances.GoronMountain); break;
-            case Region.MtCucco: HideOrDisplay(Entrances.MtCucco); break;
-            case Region.SpoolSwamp: HideOrDisplay(Entrances.SpoolSwamp); break;
-            case Region.HolodrumPlain: HideOrDisplay(Entrances.HolodrumPlain); break;
+            case Region.TempleRemains: HideOrDisplay(Entrances_Holodrum.TempleRemains); break;
+            case Region.GoronMountain: HideOrDisplay(Entrances_Holodrum.GoronMountain); break;
+            case Region.MtCucco: HideOrDisplay(Entrances_Holodrum.MtCucco); break;
+            case Region.SpoolSwamp: HideOrDisplay(Entrances_Holodrum.SpoolSwamp); break;
+            case Region.HolodrumPlain: HideOrDisplay(Entrances_Holodrum.HolodrumPlain); break;
             case Region.NatzuRegion:
-                if (Region.NatzuRegion.state == 0) { HideOrDisplay(Entrances.NatzuPrairie); break; }
-                if (Region.NatzuRegion.state == 1) { HideOrDisplay(Entrances.NatzuRiver); break; }
-                if (Region.NatzuRegion.state == 2) { HideOrDisplay(Entrances.NatzuWasteland); break; }
+                if (Region.NatzuRegion.state == 0) { HideOrDisplay(Entrances_Holodrum.NatzuPrairie); break; }
+                if (Region.NatzuRegion.state == 1) { HideOrDisplay(Entrances_Holodrum.NatzuRiver); break; }
+                if (Region.NatzuRegion.state == 2) { HideOrDisplay(Entrances_Holodrum.NatzuWasteland); break; }
             case Region.MoblinsKeep:
-                if (Region.MoblinsKeep.state == 0) HideOrDisplay(Entrances.MoblinsKeep);
+                if (Region.MoblinsKeep.state == 0) HideOrDisplay(Entrances_Holodrum.MoblinsKeep);
                 break;
-            case Region.SunkenCity: HideOrDisplay(Entrances.SunkenCity); break;
-            case Region.EyeglassLake: HideOrDisplay(Entrances.NorthHoron); HideOrDisplay(Entrances.EyeglassLake); break;
-            case Region.EasternSuburbs: HideOrDisplay(Entrances.EasternSuburbs); break;
-            case Region.WoodsOfWinter: HideOrDisplay(Entrances.WoodsOfWinter); break;
-            case Region.WesternCoast: HideOrDisplay(Entrances.Graveyard); HideOrDisplay(Entrances.WesternCoast); break;
-            case Region.HoronVillage: HideOrDisplay(Entrances.HoronVillage); break;
-            case Region.SamasaDesert: HideOrDisplay(Entrances.SamasaDesert); break;
+            case Region.SunkenCity: HideOrDisplay(Entrances_Holodrum.SunkenCity); break;
+            case Region.EyeglassLake: HideOrDisplay(Entrances_Holodrum.NorthHoron); HideOrDisplay(Entrances_Holodrum.EyeglassLake); break;
+            case Region.EasternSuburbs: HideOrDisplay(Entrances_Holodrum.EasternSuburbs); break;
+            case Region.WoodsOfWinter: HideOrDisplay(Entrances_Holodrum.WoodsOfWinter); break;
+            case Region.WesternCoast: HideOrDisplay(Entrances_Holodrum.Graveyard); HideOrDisplay(Entrances_Holodrum.WesternCoast); break;
+            case Region.HoronVillage: HideOrDisplay(Entrances_Holodrum.HoronVillage); break;
+            case Region.SamasaDesert: HideOrDisplay(Entrances_Holodrum.SamasaDesert); break;
         }
         function HideOrDisplay (entrRegion) {
             const start = GetEntrance0(entrRegion);
@@ -202,10 +202,10 @@
             return;
         }
         function GetEntrance0 (entrRegion) {
-            const regionIndex = Object.values(Entrances).indexOf(entrRegion);
+            const regionIndex = Object.values(Entrances_Holodrum).indexOf(entrRegion);
             let entr0 = 0;
             for (let i = 0; i < regionIndex; i++) {
-                entr0 += Object.values(Entrances)[i].length;
+                entr0 += Object.values(Entrances_Holodrum)[i].length;
             }
             return entr0;
         }
